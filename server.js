@@ -1,8 +1,11 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors"); // 👈 ADD THIS
+
 const app = express();
 
 app.use(express.json());
+app.use(cors()); // 👈 ADD THIS
 
 // Schema
 const clickSchema = new mongoose.Schema({
